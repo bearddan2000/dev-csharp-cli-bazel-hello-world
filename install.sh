@@ -85,11 +85,9 @@ function start-up(){
 
     echo "$info_base enabling xhost connection to image" >> $logfile
 
-    xhost +localhost
-
     echo "$info_base running image" >> $logfile
 
-    sudo docker run -ti --rm -e DISPLAY=$DISPLAY  -v /tmp/.X11-unix:/tmp/.X11-unix  $docker_img_name
+    sudo docker run --rm $docker_img_name
 
     echo "$info_base ended" >> $logfile
 

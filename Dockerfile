@@ -1,7 +1,7 @@
 FROM ubuntu:20.04
 
-ARG IN_FILE="Program.cs"
-ARG OUT_FILE="Program.exe"
+ARG IN_FILE="hello.cs"
+ARG OUT_FILE="hello.exe"
 
 COPY bin/ .
 
@@ -19,4 +19,4 @@ RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 3FA7E03280
     && mcs -o:${OUT_FILE} ${IN_FILE} \
     && chmod +x ${OUT_FILE}
 
-CMD ["mono", "Program.exe"]
+CMD ["./run.sh"]
