@@ -1,4 +1,4 @@
-# csharp-cli-hello-world
+# dev-csharp-cli-bazel-hello-world
 
 ## Description
 A POC for c# running on linux.
@@ -6,16 +6,11 @@ A POC for c# running on linux.
 ## Tech stack
 - bash
 - c#
-  - Framework 4.7
-- mono 6.8
+- bazel
+- mono
 
 ## Docker stack
-- docker-cli
 - ubuntu:20.04
-
-## Requirements
-Docker desktop must be installed and the application
-being called must be linux compatiple.
 
 ## To run
 `sudo ./install.sh -u`
